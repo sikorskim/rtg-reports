@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Hosting;
 using System.IO;
 using OfficeOpenXml;
 using System.Text;
+using System.Globalization;
 
 namespace computerman_rtg_reports.Controllers
 {
@@ -17,7 +18,7 @@ namespace computerman_rtg_reports.Controllers
     {
         public IActionResult Index()
         {
-            string path = "pricelists/usg.xml";
+            string path = "Pricelists/usg.xml";
             XDocument doc = XDocument.Load(path);
             XElement root = doc.Element("Pricelist");
 
@@ -42,31 +43,29 @@ public IActionResult Import()
 {
     string sFileName = @"tmp/usg0618.xlsx";
     FileInfo file = new FileInfo(sFileName);
+    List<MadeService> madeServList = new List<MadeService>();
+
     // try
     // {
         using (ExcelPackage package = new ExcelPackage(file))
-        {
-            StringBuilder sb = new StringBuilder();
+        {            
             ExcelWorksheet worksheet = package.Workbook.Worksheets.FirstOrDefault();
-            int rowCount = worksheet.Dimension.Rows;
-            int ColCount = worksheet.Dimension.Columns;
-            bool bHeaderRow = true;
-            for (int row = 1; row <= rowCount; row++)
+            int rowCount = worksheet.Dimension.Rows;            
+            int startRow = 2;
+            string dtFormat = "dd-MM-yyyy";
+
+            for (int row = startRow; row <= rowCount; row++)
             {
-                for (int col = 1; col <= ColCount; col++)
-                {
-                    if (bHeaderRow)
-                    {
-                        sb.Append(worksheet.Cells[row, col].Value.ToString() + "\t");
-                    }
-                    else
-                    {
-                        sb.Append(worksheet.Cells[row, col].Value.ToString() + "\t");
-                    }
-                }
-                sb.Append(Environment.NewLine);
+                MadeService ms = new MadeService();
+                ms.Id=Int32.Parse(worksheet.Cells[row, 1].Value.ToString());
+                ms.Date=DateTime.ParseExact(worksheet.Cells[row,2].Value.ToString(), dtFormat, CultureInfo.InvariantCulture);
+                ms.PatientName=worksheet.Cells[row,6].Value.ToString();
+                ms.PatientPesel=worksheet.Cells[row,8].Value.ToString();
+                ms.ServiceCode = ms.getServiceCode(worksheet.Cells[row,11].Value.ToString());
+
+                madeServList.Add(ms);
             }
-            return View(sb.ToString());
+            return View(madeServList);
         }
     // }
     // catch (Exception ex)
