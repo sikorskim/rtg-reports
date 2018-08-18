@@ -9,10 +9,21 @@ namespace computerman_rtg_reports
         public string PatientName { get; set; }
         public string PatientPesel { get; set; }
         public string ServiceCode { get; set; }
+        public string Unit { get; set; }
 
         public string getServiceCode(string input)
         {
             return input.Substring(0, input.IndexOf(' '));  
+        }
+
+        public string getUnit(string input)
+        {
+            if(input==" ")
+            {
+                input="Skierowanie zewnętrzne";
+            }
+
+            return input;
         }
     }
 }
