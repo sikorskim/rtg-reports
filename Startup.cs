@@ -56,7 +56,7 @@ namespace computerman_rtg_reports
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller=Report}/{action=Index}/{id?}");
             });
         }
     }

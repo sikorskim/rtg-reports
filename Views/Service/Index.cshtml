@@ -4,7 +4,12 @@
     ViewData["Title"] = "Cenniki usług";    
 }
 
+<br />
 <h2>Cennik usług</h2>
+
+<div class="col-sm-2">
+    <select id="Pricelist" class="custom-select" asp-items="ViewBag.Pricelist"></select>
+</div>
 
 <table class="table table-bordered table-hover">
     <thead class="thead-light">
