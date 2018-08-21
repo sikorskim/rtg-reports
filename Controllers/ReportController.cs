@@ -25,106 +25,55 @@ namespace computerman_rtg_reports.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Index (IFormFile file)
         {
-            var fileName = @"tmp/" + getHash (DateTime.Now.ToLongTimeString ()); // + ".xlsx";
+            var fileName = "tmp/" + getHash (DateTime.Now.ToLongTimeString ());
 
             using (var stream = new FileStream (fileName, FileMode.Create))
             {
                 //file.CopyTo(stream);
                 await file.CopyToAsync (stream);
             }
+            
+            RawUserData rawUserData = new RawUserData(fileName);
+            Report report = new Report(rawUserData);            
+            string pdfFilename = report.generate();
+            await Task.Delay (5000);           
 
-            // process uploaded files
-            // Don't rely on or trust the FileName property without validation.
-
-            //return RedirectToAction("Import", new { filename = fileName });
-            return RedirectToAction ("GenerateReport3", new { filename = fileName });
+            return RedirectToAction ("GetPdfFile", new { filename = pdfFilename});
         }
 
-        public IActionResult GenerateReport (string filename)
+        public IActionResult GetPdfFile (string filename)
         {
-            List<MadeService> madeServList = MadeService.getMadeServices (filename);
+            const string contentType = "application/pdf";
+            HttpContext.Response.ContentType = contentType;
+            FileContentResult result = null;
 
-            UnitsReport unitsReport = new UnitsReport ();
-            unitsReport.StartDate = DateTime.Now;
-            unitsReport.EndDate = DateTime.Now;
-            unitsReport.Unit = "Pracownia USG";
-            unitsReport.Items = new List<UnitsReportItem> ();
-
-            List<Service> pricelist = Service.getPricelist ("usg");
-
-            foreach (var ms in madeServList.GroupBy (p => p.Unit))
+            try
             {
-                UnitsReportItem item = new UnitsReportItem ();
-                item.Unit = ms.Key;
-                item.Count = ms.Count ();
-                item.Value = 0;
-
-                foreach (var serv in ms.Select (p => p.ServiceCode))
+                result = new FileContentResult (System.IO.File.ReadAllBytes (filename), contentType)
                 {
-                    item.Value += pricelist.Single (p => p.Code == serv).Price;
-                }
-                unitsReport.Items.Add (item);
+                    FileDownloadName = "report.pdf"
+                };
+                //deleteTempFiles (filename.Substring (4, 64));
+                return result;
             }
-
-            List<UnitsReportItem> orderedList = unitsReport.Items.OrderByDescending (p => p.Count).ToList ();
-            return View (orderedList);
-        }
-
-        public IActionResult GenerateReport2 (string filename)
-        {
-            List<MadeService> madeServList = MadeService.getMadeServices (filename);
-            List<ServiceReportItem> services = new List<ServiceReportItem> ();
-            List<Service> pricelist = Service.getPricelist ("usg");
-
-            foreach (var ms in madeServList.GroupBy (p => p.ServiceCode))
+            catch (FileNotFoundException)
             {
-                ServiceReportItem item = new ServiceReportItem ();
-                item.Code = ms.Key;
-                item.Name = pricelist.Single (p => p.Code == item.Code).Name;
-                item.Count = ms.Count ();
-                item.Value = 0;
-
-                foreach (var serv in ms.Select (p => p.ServiceCode))
-                {
-                    item.Value += pricelist.Single (p => p.Code == serv).Price;
-                }
-                services.Add (item);
+                return NotFound ();
             }
-
-            List<ServiceReportItem> orderedList = services.OrderByDescending (p => p.Count).ToList ();
-            return View (orderedList);
         }
 
-        public IActionResult GenerateReport3 (string filename)
+        void deleteTempFiles(string filename)
         {
-            RawUserReport rawUserReport = new RawUserReport(filename);
-            List<MadeService> madeServList = rawUserReport.MadeServicesList;
-            List<UnitServiceReportItem> services = new List<UnitServiceReportItem> ();
-            List<Service> pricelist = Service.getPricelist ("usg");
-
-            int i = 1;
-            foreach (var ms in madeServList.GroupBy (p => p.Unit))
+            DirectoryInfo dir = new DirectoryInfo("tmp");
+            foreach (FileInfo file in dir.GetFiles())
             {
-                foreach (var serv in ms.GroupBy (p => p.ServiceCode))
+                if (file.Name.Contains(filename))
                 {
-                    UnitServiceReportItem item = new UnitServiceReportItem ();
-                    item.Unit = ms.Key;
-                    item.Value = 0;
-                    item.Id = i;
-                    item.Code = serv.Key;
-                    item.Count = ms.Where (p => p.ServiceCode == item.Code).Count ();
-                    item.Value = pricelist.Single (p => p.Code == item.Code).Price * item.Count;
-                    services.Add (item);
-                    i++;
+                    file.Delete();
                 }
             }
-
-            ViewData["Metadata"] = rawUserReport.Unit + " "+rawUserReport.StartDate+ " "+ rawUserReport.EndDate;
-
-            List<UnitServiceReportItem> orderedList = services.OrderBy(p => p.Unit).ThenByDescending(p=>p.Count).ToList ();
-            return View (orderedList);
         }
- 
+
         public IActionResult Import (string filename)
         {
             FileInfo file = new FileInfo (filename);

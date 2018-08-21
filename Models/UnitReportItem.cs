@@ -2,7 +2,7 @@ using System;
 
 namespace computerman_rtg_reports
 {
-    public class UnitsReportItem
+    public class UnitReportItem
     {
         public int Id { get; set; }
         public string Unit { get; set; }

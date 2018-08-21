@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Template>
+<Header>
+\documentclass[a4paper,10pt]~^article^~
+\usepackage~^latexsym^~
+\usepackage[polish]~^babel^~
+\usepackage[utf8]~^inputenc^~
+\usepackage[MeX]~^polski^~
+\usepackage~^float^~
+\usepackage~^geometry^~
+\usepackage[table]~^xcolor^~
+\usepackage~^blindtext,titlefoot^~
+\usepackage~^wrapfig^~
+\usepackage~^multirow^~
+\usepackage~^array^~
+\usepackage~^longtable^~
+
+\geometry~^
+	a4paper,
+	total=~^170mm, 257mm^~,
+	left=10mm,
+	top=15mm,
+^~
+
+\date~^^~
+
+\begin~^document^~
+</Header>
+<Report1Header>
+	\noindent
+	\textbf~^\LARGE~^Zestawienie wg jednostki kierującej^~^~\\
+
+	\noindent
+		Okres: od {0} do {1}\\
+		Jednostka wykonująca: {2}\\
+</Report1Header>
+<Table1Header>
+\begin~^longtable^~[l]~^| l | l | c | r |^~
+\hline
+\textbf~^L.p.^~ &amp; \textbf~^Jednostka kierująca^~ &amp; \textbf~^Ilość badań^~ &amp; \textbf~^Wartość^~ \\ \hline
+\endhead
+</Table1Header>
+<Table1Row>
+{0} &amp; {1} &amp; {2} &amp; {3} \\ \hline
+</Table1Row>
+<Table1Summary>
+\multicolumn~^2^~~^|r|^~~^\textbf~^Suma^~^~ &amp; \textbf~^{0}^~ &amp; \textbf~^{1}^~ \\ \hline
+\end~^longtable^~
+\newpage
+</Table1Summary>
+<Report2Header>
+	\noindent
+	\textbf~^\LARGE~^Zestawienie wg usługi^~^~\\
+
+	\noindent
+	Okres: od {0} do {1}\\
+	Jednostka wykonująca: {2}\\
+</Report2Header>
+<Table2Header>
+\begin~^longtable^~[l]~^| l | l | l | c | r |^~
+\hline
+\textbf~^L.p.^~ &amp; \textbf~^Kod usługi^~ &amp; \textbf~^Nazwa usługi^~ &amp; \textbf~^Wartość^~ &amp; \textbf~^Ilość^~ \\ \hline
+\endhead
+</Table2Header>
+<Table2Row>
+{0} &amp; {1} &amp; {2} &amp; {3} &amp; {4} \\ \hline
+</Table2Row>
+<Table2Summary>
+\multicolumn~^3^~~^|r|^~~^\textbf~^Suma^~^~ &amp; \textbf~^{0}^~ &amp; \textbf~^{1}^~ \\ \hline
+\end~^longtable^~
+\newpage
+</Table2Summary>
+<Report3Header>
+	\noindent
+	\textbf~^\LARGE~^Zestawienie wg jednostki kierującej z podziałem na usługi^~^~\\
+
+	\noindent
+	Okres: od {0} do {1}\\
+	Jednostka wykonująca: {2}\\
+</Report3Header>
+<Table3Header>
+\begin~^longtable^~[l]~^| l | l | l | c | r |^~
+\hline
+\textbf~^L.p.^~ &amp; \textbf~^Jednostka kierująca^~ &amp; \textbf~^Usługa^~ &amp; \textbf~^Ilość badań^~ &amp; \textbf~^Wartość^~ \\ \hline
+\endhead
+</Table3Header>
+<Table3Row>
+{0} &amp; {1} &amp; {2} &amp; {3} &amp; {4} \\ \hline
+</Table3Row>
+<Table3Summary>
+\multicolumn~^3^~~^|r|^~~^\textbf~^Suma^~^~ &amp; \textbf~^{0}^~ &amp; \textbf~^{1}^~ \\ \hline
+\end~^longtable^~
+\unmarkedfntext~^Wygenerowano za pomocą programu Computerman Raporty RTG.^~
+\end~^document^~
+</Table3Summary>
+</Template>

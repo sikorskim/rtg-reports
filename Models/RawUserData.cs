@@ -7,22 +7,17 @@ using OfficeOpenXml;
 
 namespace computerman_rtg_reports
 {
-    public class RawUserReport
+    public class RawUserData
     {
-        public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
-        public string Unit { get; set; }
+        public string Metadata {get; set;}
         public List<MadeService> MadeServicesList { get; set; }
         ExcelWorksheet excelWorksheet;
-        string reportMetadata;
 
-        public RawUserReport (string filename)
+
+        public RawUserData (string filename)
         {
             excelWorksheet = getExcelWorksheet(filename);
-            reportMetadata = getMetadata ();
-            StartDate = getStartDate (reportMetadata);
-            EndDate = getEndDate (reportMetadata);
-            Unit = getUnit (reportMetadata);            
+            Metadata = getMetadata ();      
             MadeServicesList = getMadeServices (filename);
         }
 
@@ -35,27 +30,13 @@ namespace computerman_rtg_reports
 
         string getMetadata ()
         {
-                return excelWorksheet.Cells[4, 1].Value.ToString ();
-        }
+            return excelWorksheet.Cells[4, 1].Value.ToString ();
+        }     
 
-        DateTime parseDateTime (string rawDt)
+                DateTime parseDateTime (string rawDt)
         {
             string dtFormat = "dd-MM-yyyy";
             return DateTime.ParseExact (rawDt, dtFormat, CultureInfo.InvariantCulture);
-        }
-        DateTime getStartDate (string input)
-        {
-            return parseDateTime (input.Substring (input.IndexOf ("Data od:") + 9, 10));
-        }
-
-        DateTime getEndDate (string input)
-        {
-            return parseDateTime (input.Substring (input.IndexOf ("Data do:") + 9, 10));
-        }
-
-        string getUnit (string input)
-        {
-            return input.Substring (input.IndexOf ("Jednostka wykonująca:") + 22, 13).Trim (';');
         }
 
         List<MadeService> getMadeServices (string filename)
