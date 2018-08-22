@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pricelist Name="Pracownia KT">
+<Item Id="1" Code="TK-1" Name="Komputerowa tomografia głowy z kontrastem" Price="320"/>
+<Item Id="2" Code="TK-10" Name="Komputerowa tomografia miednicy (narządy) z kontrastem" Price="450"/>
+<Item Id="3" Code="TK-11" Name="Komputerowa tomografia miednicy (narządy) bez kontrastu" Price="350"/>
+<Item Id="4" Code="TK-12" Name="Komputerowa tomografia dwóch okolic ( j. brzuszna, miednica) z kontrastem" Price="650"/>
+<Item Id="5" Code="TK-13" Name="Komputerowa tomografia dwóch okolic ( j. brzuszna, miednica) bez kontrastu" Price="550"/>
+<Item Id="6" Code="TK-14" Name="Komputerowa tomografia angiografia głowy" Price="600"/>
+<Item Id="7" Code="TK-15" Name="Komputerowa tomografia angiografia klatki piersiowej" Price="600"/>
+<Item Id="8" Code="TK-16" Name="Komputerowa tomografia angiografia jamy brzusznej" Price="600"/>
+<Item Id="9" Code="TK-17" Name="Komputerowa tomografia angiografia jamy brzusznej i kończyn dolnych" Price="600"/>
+<Item Id="10" Code="TK-18" Name="Komputerowa tomografia dwóch okolic głowa klatka piersiowa z kontrastem" Price="650"/>
+<Item Id="11" Code="TK-19" Name="Komputerowa tomografia dwóch okolic klatka piersiowa j. brzuszna z kontrastem" Price="650"/>
+<Item Id="12" Code="TK-2" Name="Komputerowa tomografia głowy bez kontrastu" Price="250"/>
+<Item Id="13" Code="TK-20" Name="Komputerowa tomografia trzech okolic z kontrastem" Price="950"/>
+<Item Id="14" Code="TK-21" Name="Komputerowa tomografia czterech okolic z kontrastem" Price="1350"/>
+<Item Id="15" Code="TK-22" Name="Komputerowa tomografia Politrauma pięć odcinków" Price="1550"/>
+<Item Id="16" Code="TK-23" Name="Komputerowa tomografia Politrauma cztery odcinki" Price="1300"/>
+<Item Id="17" Code="TK-24" Name="Komputerowa tomografia Politrauma dwa odcinki głowa kręgosłup szyjny" Price="600"/>
+<Item Id="18" Code="TK-25" Name="Komputerowa tomografia kręgosłupa (jedna okolica)" Price="300"/>
+<Item Id="19" Code="TK-26" Name="Komputerowa tomografia kręgosłupa szyjnego" Price="300"/>
+<Item Id="20" Code="TK-27" Name="Komputerowa tomografia kręgosłupa piersiowego" Price="300"/>
+<Item Id="21" Code="TK-28" Name="Komputerowa tomografia kręgosłupa lędźwiowego" Price="300"/>
+<Item Id="22" Code="TK-29" Name="Komputerowa tomografia kości kończyny górnej lub dolnej" Price="300"/>
+<Item Id="23" Code="TK-3" Name="Komputerowa tomografia piramid kości skroniowych (uszu)  / lub zatok lub twarzoczaszki z kontrastem" Price="320"/>
+<Item Id="24" Code="TK-30" Name="Komputerowa tomografia miednicy(kości)" Price="300"/>
+<Item Id="25" Code="TK-4" Name="Komputerowa tomografia zatok obocznych nosa/twarzoczaszki/oczodoły  lub kości skroniowych bez kontrastu" Price="250"/>
+<Item Id="26" Code="TK-5" Name="Komputerowa tomografia szyi/krtani z kontrastem" Price="450"/>
+<Item Id="27" Code="TK-6" Name="Komputerowa tomografia klatki piersiowej z kontrastem" Price="450"/>
+<Item Id="28" Code="TK-7" Name="Komputerowa tomografia klatki piersiowej bez kontrastu" Price="350"/>
+<Item Id="29" Code="TK-8" Name="Komputerowa tomografia jamy brzusznej z kontrastem" Price="450"/>
+<Item Id="30" Code="TK-9" Name="Komputerowa tomografia jamy brzusznej bez kontrastu" Price="350"/>
+<Item Id="31" Code="BDTK01" Name="Tomografia Komputerowa" Price="0"/>
+<Item Id="32" Code="XXKPM" Name="Rejestracja kodu procedury medycznej" Price="0"/>
+<Item Id="33" Code="87.03.E" Name="KT zatok obocznych nosa/twarzoczaszki/oczodoły bez kontrastu" Price="250"/>
+<Item Id="34" Code="88.383" Name="KT kręgosłupa szyjnego" Price="300"/>
+<Item Id="35" Code="88.387" Name="KT kręgosłupa lędźwiowego" Price="300"/>
+<Item Id="36" Code="87.41.A" Name="Komputerowa tomografia klatki piersiowej bez kontrastu" Price="350"/>
+<Item Id="37" Code="88.38.E" Name="Komputerowa tomografia ramienia" Price="300"/>
+<Item Id="38" Code="88.01.A" Name="Komputerowa tomografia jamy brzusznej bez kontrastu" Price="350"/>
+<Item Id="39" Code="88.01.B" Name="Komputerowa tomografia dwóch okolic (j. brzuszna, miednica) z kontrastem" Price="650"/>
+<Item Id="40" Code="88.385" Name="KT kregoslupa ledzwiowego" Price="300"/>
+<Item Id="41" Code="88.38.N" Name="Komputerowa tomografia stawów skokowych" Price="300"/>
+<Item Id="42" Code="88.38.K" Name="Komputerowa tomografia stawów biodrowych" Price="300"/>
+<Item Id="43" Code="87.03.C" Name="Komputerowa tomografia piramid kosci skroniowych (uszu) bez kontrastu" Price="250"/>
+<Item Id="44" Code="87.41.B" Name="KT angiografia klatki piersiowej" Price="600"/>
+<Item Id="45" Code="87.03.A" Name="Komputerowa tomografia głowy bez kontrastu" Price="250"/>
+<Item Id="46" Code="88.01.D" Name="KT angiografia brzucha / kończyn" Price="600"/>
+<Item Id="47" Code="88.38.J" Name="Komputerowa tomografia miednicy" Price="300"/>
+<Item Id="48" Code="88.01.C" Name="Komputerowa tomografia dwóch okolic (j. brzuszna, miednica) bez kontrastu" Price="550"/>
+<Item Id="49" Code="88.38.B" Name="Komputerowa tomografia obojczyków" Price="300"/>
+<Item Id="50" Code="87.03.F" Name="Komputerowa tomografia szyi/krtani z kontrastem" Price="450"/>
+<Item Id="51" Code="87.03.G" Name="KT angiografia głowy" Price="600"/>
+</Pricelist>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pricelist Name="USG">
+<Pricelist Name="Pracownia USG">
 <Item Id="1" Code="USG-1" Name="USG tarczycy" Price="50" />
 <Item Id="2" Code="USG-2" Name="USG szyi" Price="50" />
 <Item Id="3" Code="USG-3" Name="USG jąder" Price="50" />

@@ -8,6 +8,7 @@ namespace computerman_rtg_reports
         public string Code { get; set; }
         public string Name { get; set; }
         public int Count { get; set; }
+        public int Photos { get; set; }
         public decimal Value { get; set; }
     }
 }

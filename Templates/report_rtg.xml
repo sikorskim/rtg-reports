@@ -35,19 +35,33 @@
 		Jednostka wykonująca: {2}\\
 </Report1Header>
 <Table1Header>
-\begin~^longtable^~[l]~^| l | p{9cm} | p{1.3cm} | p{3cm} |^~
+\begin~^longtable^~[l]~^| l | p{9cm} | p{1.3cm} | p{2.5cm} |^~
 \hline
 \textbf~^L.p.^~ &amp; \textbf~^Jednostka kierująca^~ &amp; \textbf~^Ilość badań^~ &amp; \textbf~^Wartość^~ \\ \hline
 \endhead
 </Table1Header>
+<Table1HeaderRTG>
+\begin~^longtable^~[l]~^| l | p{9cm} | p{1.3cm} | p{1.3cm} | p{2.5cm} |^~
+\hline
+\textbf~^L.p.^~ &amp; \textbf~^Jednostka kierująca^~ &amp; \textbf~^Ilość badań^~ &amp; \textbf~^Ilość zdjęć^~ &amp; \textbf~^Wartość^~ \\ \hline
+\endhead
+</Table1HeaderRTG>
 <Table1Row>
 {0} &amp; {1} &amp; {2} &amp; {3} \\ \hline
 </Table1Row>
+<Table1RowRTG>
+{0} &amp; {1} &amp; {2} &amp; {3} &amp; {4}\\ \hline
+</Table1RowRTG>
 <Table1Summary>
 \multicolumn~^2^~~^|r|^~~^\textbf~^Suma^~^~ &amp; \textbf~^{0}^~ &amp; \textbf~^{1}^~ \\ \hline
 \end~^longtable^~
 \newpage
 </Table1Summary>
+<Table1SummaryRTG>
+\multicolumn~^2^~~^|r|^~~^\textbf~^Suma^~^~ &amp; \textbf~^{0}^~ &amp; \textbf~^{1}^~ &amp; \textbf~^{2}^~ \\ \hline
+\end~^longtable^~
+\newpage
+</Table1SummaryRTG>
 <Report2Header>
 	\noindent
 	\textbf~^\LARGE~^Zestawienie wg usługi^~^~\\
@@ -57,19 +71,33 @@
 	Jednostka wykonująca: {2}\\
 </Report2Header>
 <Table2Header>
-\begin~^longtable^~[l]~^| l | l | p{9cm} | p{1.3cm} | p{3cm} |^~
+\begin~^longtable^~[l]~^| l | p{2cm} | p{9cm} | p{1.3cm} | p{2.5cm} |^~
 \hline
 \textbf~^L.p.^~ &amp; \textbf~^Kod usługi^~ &amp; \textbf~^Nazwa usługi^~ &amp; \textbf~^Ilość badań^~ &amp; \textbf~^Wartość^~ \\ \hline
 \endhead
 </Table2Header>
+<Table2HeaderRTG>
+\begin~^longtable^~[l]~^| l | p{2cm} | p{9cm} | p{1.3cm} | p{1.3cm} | p{2.5cm} |^~
+\hline
+\textbf~^L.p.^~ &amp; \textbf~^Kod usługi^~ &amp; \textbf~^Nazwa usługi^~ &amp; \textbf~^Ilość badań^~ &amp; \textbf~^Ilość zdjęć^~ &amp; \textbf~^Wartość^~ \\ \hline
+\endhead
+</Table2HeaderRTG>
 <Table2Row>
 {0} &amp; {1} &amp; {2} &amp; {3} &amp; {4} \\ \hline
 </Table2Row>
+<Table2RowRTG>
+{0} &amp; {1} &amp; {2} &amp; {3} &amp; {4} &amp; {5} \\ \hline
+</Table2RowRTG>
 <Table2Summary>
 \multicolumn~^3^~~^|r|^~~^\textbf~^Suma^~^~ &amp; \textbf~^{0}^~ &amp; \textbf~^{1}^~ \\ \hline
 \end~^longtable^~
 \newpage
 </Table2Summary>
+<Table2SummaryRTG>
+\multicolumn~^3^~~^|r|^~~^\textbf~^Suma^~^~ &amp; \textbf~^{0}^~ &amp; \textbf~^{1}^~ &amp; \textbf~^{2}^~ \\ \hline
+\end~^longtable^~
+\newpage
+</Table2SummaryRTG>
 <Report3Header>
 	\noindent
 	\textbf~^\LARGE~^Zestawienie wg jednostki kierującej z podziałem na usługi^~^~\\
@@ -79,18 +107,33 @@
 	Jednostka wykonująca: {2}\\
 </Report3Header>
 <Table3Header>
-\begin~^longtable^~[l]~^| l | p{9cm} | p{3cm} | p{1.3cm} | p{3cm} |^~
+\begin~^longtable^~[l]~^| l | p{9cm} | p{2cm} | p{1.3cm} | p{2.5cm} |^~
 \hline
 \textbf~^L.p.^~ &amp; \textbf~^Jednostka kierująca^~ &amp; \textbf~^Usługa^~ &amp; \textbf~^Ilość badań^~ &amp; \textbf~^Wartość^~ \\ \hline
 \endhead
 </Table3Header>
+<Table3HeaderRTG>
+\begin~^longtable^~[l]~^| l | p{8.5cm} | p{2cm} | p{1.3cm} | p{1.3cm} | p{2.5cm} |^~
+\hline
+\textbf~^L.p.^~ &amp; \textbf~^Jednostka kierująca^~ &amp; \textbf~^Kod usługi^~ &amp; \textbf~^Ilość badań^~ &amp; \textbf~^Ilość badań^~ &amp; \textbf~^Wartość^~ \\ \hline
+\endhead
+</Table3HeaderRTG>
 <Table3Row>
 {0} &amp; {1} &amp; {2} &amp; {3} &amp; {4} \\ \hline
 </Table3Row>
+<Table3RowRTG>
+{0} &amp; {1} &amp; {2} &amp; {3} &amp; {4} &amp; {5} \\ \hline
+</Table3RowRTG>
 <Table3Summary>
 \multicolumn~^3^~~^|r|^~~^\textbf~^Suma^~^~ &amp; \textbf~^{0}^~ &amp; \textbf~^{1}^~ \\ \hline
 \end~^longtable^~
 \unmarkedfntext~^Wygenerowano za pomocą programu Computerman Raporty RTG.^~
 \end~^document^~
 </Table3Summary>
+<Table3SummaryRTG>
+\multicolumn~^3^~~^|r|^~~^\textbf~^Suma^~^~ &amp; \textbf~^{0}^~ &amp; \textbf~^{1}^~ &amp; \textbf~^{2}^~ \\ \hline
+\end~^longtable^~
+\unmarkedfntext~^Wygenerowano za pomocą programu Computerman Raporty RTG.^~
+\end~^document^~
+</Table3SummaryRTG>
 </Template>

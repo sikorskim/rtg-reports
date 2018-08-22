@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pricelist Name="Pracownia RTG">
+<Item Id="1" Code="RTG-1" Name="Skopia płuc (0)" Price="20" Photos="0"/>
+<Item Id="2" Code="RTG-10" Name="Prześwietlenie przełyku (3)" Price="70" Photos="3"/>
+<Item Id="3" Code="RTG-100" Name="Zdj. rtg stawu biodrowego osiowe (1) lub ap" Price="34" Photos="1"/>
+<Item Id="4" Code="RTG-101" Name="Zdj. rtg stawów biodrowych dziecka w pozycji ap" Price="30" Photos="1"/>
+<Item Id="5" Code="RTG-102" Name="Zdj. rtg kości udowej ap i bocz (2)" Price="45" Photos="2"/>
+<Item Id="6" Code="RTG-103" Name="Zdj. rtg kości udowej ap (1) lub bocz" Price="27" Photos="1"/>
+<Item Id="7" Code="RTG-104" Name="Zdj. rtg stawów kolanowych P i L ap i bocz (3)(4)" Price="47" Photos="4"/>
+<Item Id="8" Code="RTG-105" Name="Zdj. rtg stawów kolanowych P i L ap (1) (2) / lub boczP i L(2)" Price="30" Photos="2"/>
+<Item Id="9" Code="RTG-106" Name="Zdj. rtg styczne rzepek P i L (2)" Price="34" Photos="2"/>
+<Item Id="10" Code="RTG-107" Name="Zdj. rtg stawu kolanowego ap i bocz (2)" Price="40" Photos="2"/>
+<Item Id="11" Code="RTG-108" Name="Zdj. rtg stawu kolanowego ap (1) lub bocz" Price="27" Photos="1"/>
+<Item Id="12" Code="RTG-109" Name="Zdj. rtg styczne rzepki (1)" Price="27" Photos="1"/>
+<Item Id="13" Code="RTG-11" Name="Prześwietlenie górnego odcinka przewodu pokarmowego (7)" Price="85" Photos="7"/>
+<Item Id="14" Code="RTG-110" Name="Zdj. rtg kości podudzia P i L ap i bocz (3)" Price="50" Photos="3"/>
+<Item Id="15" Code="RTG-111" Name="Zdj. rtg kości podudzia P i L ap (1)" Price="30" Photos="1"/>
+<Item Id="16" Code="RTG-112" Name="Zdj. rtg kości podudzia P i L bocz (2)" Price="40" Photos="2"/>
+<Item Id="17" Code="RTG-113" Name="Zdj. rtg kości podudzia  ap i bocz (2)" Price="40" Photos="2"/>
+<Item Id="18" Code="RTG-114" Name="Zdj. rtg kości podudzia ap (1) / lub bocz" Price="27" Photos="1"/>
+<Item Id="19" Code="RTG-115" Name="Zdj. rtg stawów skokowych P i L ap i bocz (3)" Price="45" Photos="3"/>
+<Item Id="20" Code="RTG-116" Name="Zdj. rtg stawów skokowych P i L ap (1)" Price="27" Photos="1"/>
+<Item Id="21" Code="RTG-117" Name="Zdj. rtg stawów skokowych P i L boczne (2)" Price="33" Photos="2"/>
+<Item Id="22" Code="RTG-118" Name="Zdj. rtg stawu skokowego  ap i bocz (2) l" Price="33" Photos="2"/>
+<Item Id="23" Code="RTG-119" Name="Zdj. rtg stawu skokowego ap (1) / lub bocz" Price="27" Photos="1"/>
+<Item Id="24" Code="RTG-12" Name="Wlew kontrastowy jelita grubego (9)" Price="120" Photos="9"/>
+<Item Id="25" Code="RTG-120" Name="Zdj. rtg kości stóp P i L ap i bocz (3)" Price="47" Photos="3"/>
+<Item Id="26" Code="RTG-121" Name="Zdj. rtg kości stóp P i L ap (1)" Price="27" Photos="1"/>
+<Item Id="27" Code="RTG-122" Name="Zdj. rtg kości stóp P i L bocz (2)" Price="33" Photos="2"/>
+<Item Id="28" Code="RTG-123" Name="Zdj. rtg kości stopy ap i bocz (2)" Price="33" Photos="2"/>
+<Item Id="29" Code="RTG-124" Name="Zdj. rtg kości stopy ap (1) / lub bocz" Price="27" Photos="1"/>
+<Item Id="30" Code="RTG-125" Name="Zdj. rtg kości piętowych P i L osiowe i boczne (3)" Price="47" Photos="3"/>
+<Item Id="31" Code="RTG-126" Name="Zdj. rtg kości piętowych P i L osiowe (1)" Price="27" Photos="1"/>
+<Item Id="32" Code="RTG-127" Name="Zdj. rtg kości piętowych P i L boczne (2)" Price="33" Photos="2"/>
+<Item Id="33" Code="RTG-128" Name="Zdj. rtg kości piętowej osiowe i boczne (2)" Price="33" Photos="2"/>
+<Item Id="34" Code="RTG-129" Name="Zdj. rtg kości piętowej osiowe i boczne (2)" Price="33" Photos="2"/>
+<Item Id="35" Code="RTG-13" Name="Biopsja (0)" Price="30" Photos="0"/>
+<Item Id="36" Code="RTG-130" Name="Zdj. rtg palca stopy ap i bocz (2)" Price="33" Photos="2"/>
+<Item Id="37" Code="RTG-131" Name="Zdj. rtg palca stopy ap (1) / lub bocz" Price="27" Photos="1"/>
+<Item Id="38" Code="RTG-132" Name="Zdj. rtg stawu ramiennego ap i osiowe (2)(bark)" Price="38" Photos="2"/>
+<Item Id="39" Code="RTG-133" Name="Zdj. rtg stawu ramiennego ap i poz. Y(bark)" Price="38" Photos="1"/>
+<Item Id="40" Code="RTG-134" Name="zd. rtg stawu ramiennego poz Y(bark)/ lub ap lub osiowe" Price="27" Photos="1"/>
+<Item Id="41" Code="RTG-135" Name="Zdj. rtg łopatki ap i styczne" Price="38" Photos="1"/>
+<Item Id="42" Code="RTG-136" Name="Zdj. rtg łopatki ap (1)" Price="27" Photos="1"/>
+<Item Id="43" Code="RTG-137" Name="Zdj. rtg kości ramiennej ap i bocz (2)" Price="43" Photos="2"/>
+<Item Id="44" Code="RTG-138" Name="Zdj. rtg kości ramiennej ap (1) / lub bocz" Price="27" Photos="1"/>
+<Item Id="45" Code="RTG-139" Name="Zdj. rtg obu stawów łokciowych P i L ap i bocz (3) (4)" Price="47" Photos="4"/>
+<Item Id="46" Code="RTG-14" Name="Histerosalphingografia HSG (3)" Price="80" Photos="3"/>
+<Item Id="47" Code="RTG-140" Name="Zdj. rtg obu stawów łokciowych P i L ap (1) (2)" Price="27" Photos="2"/>
+<Item Id="48" Code="RTG-142" Name="Zdj. rtg stawu łokciowego ap i bocz (2)" Price="34" Photos="2"/>
+<Item Id="49" Code="RTG-143" Name="Zdj. rtg stawu łokciowego ap (1) / lub bocz" Price="27" Photos="1"/>
+<Item Id="50" Code="RTG-144" Name="Zdj. rtg kości przedramienia ap i bocz (2)" Price="34" Photos="2"/>
+<Item Id="51" Code="RTG-145" Name="Zdj. rtg kości przedramienia ap (1) / lub bocz" Price="27" Photos="1"/>
+<Item Id="52" Code="RTG-146" Name="Zdj. rtg stawów nadgarstkowych P i L ap i bocz (2)" Price="34" Photos="2"/>
+<Item Id="53" Code="RTG-147" Name="Zdj. rtg stawów nadgarstkowych P i L ap (1) / lub P i L bocz" Price="27" Photos="1"/>
+<Item Id="54" Code="RTG-148" Name="Zdj. rtg stawu nadgarstkowego ap i bocz (2)" Price="34" Photos="2"/>
+<Item Id="55" Code="RTG-149" Name="Zdj. rtg stawu nadgarstkowego ap (1) / lub bocz" Price="27" Photos="1"/>
+<Item Id="56" Code="RTG-15" Name="Opis zdjęcia Rtg (1komplet)" Price="15" Photos="0"/>
+<Item Id="57" Code="RTG-150" Name="Zdj. rtg kości rąk P i L ap i skos (2)" Price="34" Photos="2"/>
+<Item Id="58" Code="RTG-151" Name="Zdj. rtg kości rąk P i L  ap (1) / lub P i L skos" Price="27" Photos="1"/>
+<Item Id="59" Code="RTG-152" Name="Zdj. rtg kości ręki ap i skos (2)" Price="34" Photos="2"/>
+<Item Id="60" Code="RTG-153" Name="Zdj. rtg kości ręki ap (1) / lub skos" Price="27" Photos="1"/>
+<Item Id="61" Code="RTG-154" Name="Zdj. rtg palca ręki ap i bocz (2)" Price="30" Photos="2"/>
+<Item Id="62" Code="RTG-155" Name="Zdj. rtg palca ręki ap (1) / lub bocz" Price="27" Photos="1"/>
+<Item Id="63" Code="RTG-156" Name="Zdj. rtg" Price="27" Photos="1"/>
+<Item Id="64" Code="RTG-16" Name="Wykonanie kopii opisu badania Rtg (1)" Price="8" Photos="0"/>
+<Item Id="65" Code="RTG-17" Name="Wykonanie kopii zdjęć rtg na nośniku cyfrowym (płyta CD) za 1 szt." Price="8" Photos="0"/>
+<Item Id="66" Code="RTG-18" Name="Urografia zdjęcie przeglądowe zdj. (1)" Price="32" Photos="1"/>
+<Item Id="67" Code="RTG-19" Name="Urografia (3 kontr. niejonowy)" Price="192" Photos="3"/>
+<Item Id="68" Code="RTG-2" Name="Skopia - nastawianie złamania (0)" Price="30" Photos="0"/>
+<Item Id="69" Code="RTG-20" Name="Urografia dodatkowe zdj. (1)" Price="15" Photos="1"/>
+<Item Id="70" Code="RTG-21" Name="Pasaż jelitowy (1)" Price="35" Photos="1"/>
+<Item Id="71" Code="RTG-22" Name="Pasaż jelitowy dodatkowe zdj. (1)" Price="15" Photos="1"/>
+<Item Id="72" Code="RTG-23" Name="CUM Cystouretrografia wsteczna (3)" Price="80" Photos="3"/>
+<Item Id="73" Code="RTG-24" Name="Cystografia (2)" Price="45" Photos="2"/>
+<Item Id="74" Code="RTG-25" Name="Cystografia dodatkowe zdj. (1)" Price="15" Photos="1"/>
+<Item Id="75" Code="RTG-26" Name="Cholangiografia śródoperacyjna (1)" Price="35" Photos="1"/>
+<Item Id="76" Code="RTG-27" Name="Cholangiografia przez T dren (2)" Price="55" Photos="2"/>
+<Item Id="77" Code="RTG-28" Name="Zdj. rtg klatki piersiowej pa (1) / lub ap lub bocz" Price="32" Photos="1"/>
+<Item Id="78" Code="RTG-29" Name="Zdj. rtg klatki piersiowej pa i bocz (2)" Price="45" Photos="2"/>
+<Item Id="79" Code="RTG-3" Name="Usunięcie ciała obcego (0)" Price="30" Photos="0"/>
+<Item Id="80" Code="RTG-30" Name="Zdj. rtg klatki piersiowej ap i bocz (2)" Price="45" Photos="2"/>
+<Item Id="81" Code="RTG-31" Name="Zdj. rtg klatki piersiowej przyłóżkowe ap (1)" Price="35" Photos="1"/>
+<Item Id="82" Code="RTG-32" Name="Zdj. rtg przepony  ap (1) lub szczytów płuc ap" Price="32" Photos="1"/>
+<Item Id="83" Code="RTG-33" Name="Zdj. rtg klatki piersiowej bocz L z kontrastem w przełyku (1)" Price="35" Photos="1"/>
+<Item Id="84" Code="RTG-34" Name="Zdj. rtg klatki piersiowej pa i bocz L z kontrastem w przełyku (2)" Price="50" Photos="2"/>
+<Item Id="85" Code="RTG-35" Name="Zdj. rtg tchawicy bocz (1)" Price="25" Photos="1"/>
+<Item Id="86" Code="RTG-36" Name="Zdj. rtg tchawicy ap (1)" Price="25" Photos="1"/>
+<Item Id="87" Code="RTG-37" Name="Zdj rtg tchawicy ap i bocz (2)" Price="45" Photos="2"/>
+<Item Id="88" Code="RTG-38" Name="Zdj. rtg żeber ap (1) / lub bocz lub skośne" Price="32" Photos="1"/>
+<Item Id="89" Code="RTG-39" Name="Zdj. rtg żeber ap i bocz (2)" Price="42" Photos="2"/>
+<Item Id="90" Code="RTG-4" Name="Skopia zdjęcie upatrzone (1)" Price="32" Photos="1"/>
+<Item Id="91" Code="RTG-40" Name="Zdj. rtg żeber ap i skośne (2)" Price="42" Photos="2"/>
+<Item Id="92" Code="RTG-41" Name="Zdj. rtg  mostka pa (1) / lub bocz" Price="30" Photos="1"/>
+<Item Id="93" Code="RTG-42" Name="Zdj. rtg mostka pa i bocz (2)" Price="42" Photos="2"/>
+<Item Id="94" Code="RTG-43" Name="Zdj. rtg obojczyka pa (1)" Price="25" Photos="1"/>
+<Item Id="95" Code="RTG-44" Name="Zdj. rtg przeglądowe jamy brzusznaj ap" Price="32" Photos="1"/>
+<Item Id="96" Code="RTG-45" Name="Zdj. rtg pęcherza moczowego ap (1)" Price="26" Photos="1"/>
+<Item Id="97" Code="RTG-46" Name="Zdj. rtg jamy brzusznej od pęcherza w górę ap (1)" Price="32" Photos="1"/>
+<Item Id="98" Code="RTG-47" Name="Zdj. rtg jamy brzusznej w pozycji stojącej ap (1)" Price="32" Photos="1"/>
+<Item Id="99" Code="RTG-48" Name="Zdj. rtg jamy brzusznej poziomą wiązką promieni (1)" Price="32" Photos="1"/>
+<Item Id="100" Code="RTG-49" Name="Zdj. rtg jamy brzusznej i pęcherza moczowego ap (2)" Price="45" Photos="2"/>
+<Item Id="101" Code="RTG-5" Name="Skopia zdjęcie upatrzone (2)" Price="40" Photos="2"/>
+<Item Id="102" Code="RTG-50" Name="Zdj. rtg ciąży ap (1)" Price="32" Photos="1"/>
+<Item Id="103" Code="RTG-51" Name="Zdj. rtg pelwimetria (2)" Price="45" Photos="2"/>
+<Item Id="104" Code="RTG-52" Name="Zdj. rtg pelwimetria (1)" Price="32" Photos="1"/>
+<Item Id="105" Code="RTG-53" Name="Zdj. rtg czaszki pa i bocz (2)" Price="45" Photos="2"/>
+<Item Id="106" Code="RTG-54" Name="Zdj. rtg czaszki ap i bocz (2)" Price="45" Photos="2"/>
+<Item Id="107" Code="RTG-55" Name="Zdj. rtg czaszki pa (1) / lub ap lub bocz" Price="27" Photos="1"/>
+<Item Id="108" Code="RTG-56" Name="Zdj. rtg podstawy czaszki (1)" Price="27" Photos="1"/>
+<Item Id="109" Code="RTG-57" Name="Zdj. rtg kości potylicznej ap (1)" Price="27" Photos="1"/>
+<Item Id="110" Code="RTG-58" Name="Zdj. rtg kości twarzoczaszki pa (1)" Price="27" Photos="1"/>
+<Item Id="111" Code="RTG-59" Name="Zdj. rtg siodełko tureckie bocz (1)" Price="27" Photos="1"/>
+<Item Id="112" Code="RTG-6" Name="Fistulografia (2)" Price="60" Photos="2"/>
+<Item Id="113" Code="RTG-60" Name="Zdj. rtg zatok obocznych nosa pa (1) /lub bocz" Price="27" Photos="1"/>
+<Item Id="114" Code="RTG-61" Name="Zdj. rtg oczodołów 2 x pa i bocz (3)" Price="50" Photos="3"/>
+<Item Id="115" Code="RTG-62" Name="Zdj. rtg oczodołów pa (1)" Price="27" Photos="1"/>
+<Item Id="116" Code="RTG-63" Name="Zdj. rtg oczodołu pa (1) / lub bocz" Price="27" Photos="1"/>
+<Item Id="117" Code="RTG-64" Name="Zdj. rtg kości nosa bocz (1)" Price="27" Photos="1"/>
+<Item Id="118" Code="RTG-65" Name="Zdj. rtg kości żuchwy pa (1) / lub skośne lub bocz" Price="27" Photos="1"/>
+<Item Id="119" Code="RTG-66" Name="Zdj. rtg kości żuchwy pa i bocz (2)" Price="40" Photos="2"/>
+<Item Id="120" Code="RTG-67" Name="Zdj. rtg kości żuchwy pa i skośne (3)" Price="50" Photos="3"/>
+<Item Id="121" Code="RTG-68" Name="Zdj. rtg staw skroniowo-żuchwowy boczne otwarte i zamknięte usta (2)" Price="40" Photos="2"/>
+<Item Id="122" Code="RTG-69" Name="Zdj. rtg okolica jarzmowo-szczękowa (1)" Price="27" Photos="1"/>
+<Item Id="123" Code="RTG-7" Name="Cholangiografia (monitor) (2)" Price="60" Photos="2"/>
+<Item Id="124" Code="RTG-70" Name="Zdj. rtg kanału nerwu wzrokowego (1)" Price="27" Photos="1"/>
+<Item Id="125" Code="RTG-71" Name="Zdj. rtg kości skalistej (1)" Price="27" Photos="1"/>
+<Item Id="126" Code="RTG-72" Name="Zdj. rtg uszu wg Schillera i Stenwersa P L (4)" Price="100" Photos="4"/>
+<Item Id="127" Code="RTG-73" Name="Zdj. rtg uszu jednego wg Schillera i Stenwersa (2)" Price="50" Photos="2"/>
+<Item Id="128" Code="RTG-74" Name="Zdj. rtg uszu wg Schiillera (1)" Price="27" Photos="1"/>
+<Item Id="129" Code="RTG-75" Name="Zdj. rtg uszu wg Stenwersa (1)" Price="27" Photos="1"/>
+<Item Id="130" Code="RTG-76" Name="Zdj. rtg ślinianki skośne (1)" Price="27" Photos="1"/>
+<Item Id="131" Code="RTG-77" Name="Zdj. rtg kręgosłupa szyjnego ap i bocz (2)" Price="45" Photos="2"/>
+<Item Id="132" Code="RTG-78" Name="Zdj. rtg kręgosłupa szyjnego ap (1) /lub bocz" Price="27" Photos="1"/>
+<Item Id="133" Code="RTG-79" Name="Zdj. rtg kręgosłupa szyjnego skosy P i L (2)" Price="45" Photos="2"/>
+<Item Id="134" Code="RTG-8" Name="Uretropyelografia (3)" Price="60" Photos="3"/>
+<Item Id="135" Code="RTG-80" Name="Zdj. rtg kręgosłupa szyjnego czynnościowe boczne (2)" Price="45" Photos="2"/>
+<Item Id="136" Code="RTG-81" Name="Zdj. rtg kręgosłupa piersiowego ap i bocz (2)" Price="54" Photos="2"/>
+<Item Id="137" Code="RTG-82" Name="Zdj. rtg kręgosłupa lędźwiowego ap i bocz, cel (3)" Price="70" Photos="3"/>
+<Item Id="138" Code="RTG-83" Name="Zdj. rtg kręgosłupa lędźwiowego skośne P i L (2)" Price="54" Photos="2"/>
+<Item Id="139" Code="RTG-84" Name="Zdj. rtg kręgosłupa lędźwiowego czynnościowe bocz (2)" Price="54" Photos="2"/>
+<Item Id="140" Code="RTG-85" Name="Zdj. rtg kręgosłupa piersiowego ap (1) / lub bocz" Price="32" Photos="1"/>
+<Item Id="141" Code="RTG-86" Name="Zdj. rtg kręgosłupa lędźwiowego ap (1) / lub bocz" Price="32" Photos="1"/>
+<Item Id="142" Code="RTG-87" Name="Zdj. rtg kości guzicznej ap i bocz (2)" Price="45" Photos="2"/>
+<Item Id="143" Code="RTG-88" Name="Zdj. rtg kości guzicznej ap (1) / lub bocz" Price="27" Photos="1"/>
+<Item Id="144" Code="RTG-89" Name="Zdj. rtg celowane kręgosłupa ap i bocz (2)" Price="45" Photos="2"/>
+<Item Id="145" Code="RTG-9" Name="Radikulografia (4)" Price="60" Photos="4"/>
+<Item Id="146" Code="RTG-90" Name="Zdj. rtg celowane kręgosłupa ap (1) / lub bocz" Price="27" Photos="1"/>
+<Item Id="147" Code="RTG-91" Name="Zdj. rtg kręgosłupa na skoliozę ap (1)" Price="32" Photos="1"/>
+<Item Id="148" Code="RTG-92" Name="Zdj. rtg kręgosłupa na skoliozę ap i bocz (2)" Price="55" Photos="2"/>
+<Item Id="149" Code="RTG-93" Name="Zdj. rtg kręgosłupa na skoliozę th i ls ap (2)" Price="50" Photos="2"/>
+<Item Id="150" Code="RTG-94" Name="Zdj. rtg kręgosłupa na skoliozę th i ls ap i bocz (4)" Price="80" Photos="4"/>
+<Item Id="151" Code="RTG-95" Name="Zdj. rtg miednicy stawów biodrowych ap (1)" Price="34" Photos="1"/>
+<Item Id="152" Code="RTG-96" Name="Zdj. rtg stawów biodrowych P L ap i osiowe (3)" Price="45" Photos="3"/>
+<Item Id="153" Code="RTG-97" Name="Zdj. rtg stawów krzyżowo-biodrowych ap (1)" Price="27" Photos="1"/>
+<Item Id="154" Code="RTG-98" Name="Zdj. rtg stawów krzyżowo-biodrowych. skosy P i L (2)" Price="45" Photos="2"/>
+<Item Id="155" Code="RTG-99" Name="Zdj. rtg stawu biodrowego ap i osiowe (2)" Price="45" Photos="2"/>
+<Item Id="156" Code="XXKPM" Name="Rejestracja kodu procedury medycznej" Price="0" Photos="0"/>
+<Item Id="157" Code="88.11" Name="Zdjęcie RTG miednicy" Price="34" Photos="1"/>
+<Item Id="158" Code="87.17" Name="Zdj. rtg czaszki pa i bocz P (2)" Price="45" Photos="2"/>
+<Item Id="159" Code="RTG-141" Name=" Zdj. rtg obu stawów łokciowych P i L bocz (2)" Price="27" Photos="2"/>
+</Pricelist>
