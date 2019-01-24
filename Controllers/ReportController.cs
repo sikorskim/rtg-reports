@@ -36,7 +36,7 @@ namespace computerman_rtg_reports.Controllers
             RawUserData rawUserData = new RawUserData(fileName);
             Report report = new Report(rawUserData);            
             string pdfFilename = report.generate();
-            await Task.Delay (5000);           
+            await Task.Delay (1000);           
 
             return RedirectToAction ("GetPdfFile", new { filename = pdfFilename});
         }

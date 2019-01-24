@@ -15,11 +15,14 @@ namespace computerman_rtg_reports
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
         public string Unit { get; set; }
+        public bool DataIsValid { get; set; }
+        public List<WrongServiceItem> WrongServices { get; set; }
         List<UnitReportItem> UnitReportItems { get; set; }
         List<ServiceReportItem> ServiceReportItems { get; set; }
-        List<UnitServiceReportItem> UnitServiceReportItems { get; set; }
+        List<UnitServiceReportItem> UnitServiceReportItems { get; set; }        
         RawUserData rawUserData;
         List<Service> pricelist;
+        string dateFormat = "yyyy-MM-dd";
 
         public Report (RawUserData rawUserData)
         {
@@ -28,9 +31,57 @@ namespace computerman_rtg_reports
             EndDate = getEndDate (rawUserData.Metadata);
             Unit = getUnit (rawUserData.Metadata);
             pricelist = getPricelist (Unit);
-            UnitReportItems = getUnitsReport ();
-            ServiceReportItems = getServiceReport ();
-            UnitServiceReportItems = getUnitServiceReport ();
+
+            DataIsValid=checkServicesExistOnPricelist();
+
+            if(DataIsValid)
+            {
+                UnitReportItems = getUnitsReport ();
+                ServiceReportItems = getServiceReport ();
+                UnitServiceReportItems = getUnitServiceReport ();
+            }
+            else
+            {
+                WrongServices = getWrongServices();
+            }
+        }
+
+        bool getWrongServices()
+        {
+            List<UnitReportItem> unitReportItems = new List<UnitReportItem> ();
+
+            try
+            {
+                foreach (var ms in rawUserData.MadeServicesList.GroupBy (p => p.Unit))
+                {
+                    UnitReportItem item = new UnitReportItem ();
+                    item.Unit = ms.Key;
+                    item.Count = ms.Count ();
+                    item.Value = 0;
+
+                    foreach (var serv in ms.Select (p => p.ServiceCode))
+                    {
+                        item.Value += pricelist.Single (p => p.Code == serv).Price;
+                        if (Unit == "Pracownia RTG")
+                        {
+                            item.Photos += pricelist.Single (p => p.Code == serv).Photos;
+                        }
+                    }
+                    unitReportItems.Add (item);
+                }
+            }
+            catch (InvalidOperationException)
+            {
+                foreach (var ms in rawUserData.MadeServicesList)
+                {
+                    if (!pricelist.Exists (p => p.Code == ms.ServiceCode))
+                    {
+                        Console.WriteLine (ms.PatientName);
+                    }
+                }
+            }
+
+            return unitReportItems.OrderByDescending (p => p.Count).ToList ();
         }
 
         DateTime parseDateTime (string rawDt)
@@ -193,7 +244,7 @@ namespace computerman_rtg_reports
 
             // units report
             string report1Header = root.Element ("Report1Header").Value;
-            report1Header = string.Format (report1Header, StartDate.ToShortDateString (), EndDate.ToShortDateString (), Unit);
+            report1Header = string.Format (report1Header, StartDate.ToString(dateFormat), EndDate.ToString(dateFormat), Unit);
 
             string table1Header = root.Element ("Table1Header").Value;
             string table1Item = root.Element ("Table1Row").Value;
@@ -202,7 +253,7 @@ namespace computerman_rtg_reports
             decimal report1Value = 0;
             foreach (UnitReportItem item in UnitReportItems)
             {
-                string newItem = string.Format (table1Item, i, item.Unit, item.Count, item.Value.ToString ("c"));
+                string newItem = string.Format (table1Item, i, item.Unit, item.Count, item.Value.ToString ("0.##"));
                 table1Header += newItem;
                 report1Count += item.Count;
                 report1Value += item.Value;
@@ -210,13 +261,13 @@ namespace computerman_rtg_reports
             }
 
             string table1Summary = root.Element ("Table1Summary").Value;
-            table1Summary = string.Format (table1Summary, report1Count, report1Value.ToString ("c"));
+            table1Summary = string.Format (table1Summary, report1Count, report1Value.ToString ("0.##"));
 
             string report1 = report1Header + table1Header + table1Summary;
 
             // services report
             string report2Header = root.Element ("Report2Header").Value;
-            report2Header = string.Format (report2Header, StartDate.ToShortDateString (), EndDate.ToShortDateString (), Unit);
+            report2Header = string.Format (report2Header, StartDate.ToString(dateFormat), EndDate.ToString(dateFormat), Unit);
 
             string table2Header = root.Element ("Table2Header").Value;
             string table2Item = root.Element ("Table2Row").Value;
@@ -225,7 +276,7 @@ namespace computerman_rtg_reports
             decimal report2Value = 0;
             foreach (ServiceReportItem item in ServiceReportItems)
             {
-                string newItem = string.Format (table2Item, i, item.Code, item.Name, item.Count, item.Value.ToString ("c"));
+                string newItem = string.Format (table2Item, i, item.Code, item.Name, item.Count, item.Value.ToString ("0.##"));
                 table2Header += newItem;
                 report2Count += item.Count;
                 report2Value += item.Value;
@@ -233,13 +284,13 @@ namespace computerman_rtg_reports
             }
 
             string table2Summary = root.Element ("Table2Summary").Value;
-            table2Summary = string.Format (table2Summary, report2Count, report2Value.ToString ("c"));
+            table2Summary = string.Format (table2Summary, report2Count, report2Value.ToString ("0.##"));
 
             string report2 = report2Header + table2Header + table2Summary;
 
             // unitservice report
             string report3Header = root.Element ("Report3Header").Value;
-            report3Header = string.Format (report3Header, StartDate.ToShortDateString (), EndDate.ToShortDateString (), Unit);
+            report3Header = string.Format (report3Header, StartDate.ToString(dateFormat), EndDate.ToString(dateFormat), Unit);
 
             string table3Header = root.Element ("Table3Header").Value;
             string table3Item = root.Element ("Table3Row").Value;
@@ -248,7 +299,7 @@ namespace computerman_rtg_reports
             decimal report3Value = 0;
             foreach (UnitServiceReportItem item in UnitServiceReportItems)
             {
-                string newItem = string.Format (table3Item, i, item.Unit, item.Code, item.Count, item.Value.ToString ("c"));
+                string newItem = string.Format (table3Item, i, item.Unit, item.Code, item.Count, item.Value.ToString ("0.##"));
                 table3Header += newItem;
                 report3Count += item.Count;
                 report3Value += item.Value;
@@ -256,7 +307,7 @@ namespace computerman_rtg_reports
             }
 
             string table3Summary = root.Element ("Table3Summary").Value;
-            table3Summary = string.Format (table3Summary, report3Count, report3Value.ToString ("c"));
+            table3Summary = string.Format (table3Summary, report3Count, report3Value.ToString ("0.##"));
 
             string report3 = report3Header + table3Header + table3Summary;
 
@@ -270,7 +321,7 @@ namespace computerman_rtg_reports
 
             // units report
             string report1Header = root.Element ("Report1Header").Value;
-            report1Header = string.Format (report1Header, StartDate.ToShortDateString (), EndDate.ToShortDateString (), Unit);
+            report1Header = string.Format (report1Header, StartDate.ToString(dateFormat), EndDate.ToString(dateFormat), Unit);
 
             string table1Header = root.Element ("Table1HeaderRTG").Value;
             string table1Item = root.Element ("Table1RowRTG").Value;
@@ -280,7 +331,7 @@ namespace computerman_rtg_reports
             decimal report1Value = 0;
             foreach (UnitReportItem item in UnitReportItems)
             {
-                string newItem = string.Format (table1Item, i, item.Unit, item.Count, item.Photos, item.Value.ToString ("c"));
+                string newItem = string.Format (table1Item, i, item.Unit, item.Count, item.Photos, item.Value.ToString ("0.##"));
                 table1Header += newItem;
                 report1Count += item.Count;
                 report1Photos += item.Photos;
@@ -289,13 +340,13 @@ namespace computerman_rtg_reports
             }
 
             string table1Summary = root.Element ("Table1SummaryRTG").Value;
-            table1Summary = string.Format (table1Summary, report1Count, report1Photos, report1Value.ToString ("c"));
+            table1Summary = string.Format (table1Summary, report1Count, report1Photos, report1Value.ToString ("0.##"));
 
             string report1 = report1Header + table1Header + table1Summary;
 
             // services report
             string report2Header = root.Element ("Report2Header").Value;
-            report2Header = string.Format (report2Header, StartDate.ToShortDateString (), EndDate.ToShortDateString (), Unit);
+            report2Header = string.Format (report2Header, StartDate.ToString(dateFormat), EndDate.ToString(dateFormat), Unit);
 
             string table2Header = root.Element ("Table2HeaderRTG").Value;
             string table2Item = root.Element ("Table2RowRTG").Value;
@@ -305,7 +356,7 @@ namespace computerman_rtg_reports
             decimal report2Value = 0;
             foreach (ServiceReportItem item in ServiceReportItems)
             {
-                string newItem = string.Format (table2Item, i, item.Code, item.Name, item.Count, item.Photos, item.Value.ToString ("c"));
+                string newItem = string.Format (table2Item, i, item.Code, item.Name, item.Count, item.Photos, item.Value.ToString ("0.##"));
                 table2Header += newItem;
                 report2Count += item.Count;
                 report2Photos += item.Photos;
@@ -314,13 +365,13 @@ namespace computerman_rtg_reports
             }
 
             string table2Summary = root.Element ("Table2SummaryRTG").Value;
-            table2Summary = string.Format (table2Summary, report2Count, report2Photos, report2Value.ToString ("c"));
+            table2Summary = string.Format (table2Summary, report2Count, report2Photos, report2Value.ToString ("0.##"));
 
             string report2 = report2Header + table2Header + table2Summary;
 
             // unitservice report
             string report3Header = root.Element ("Report3Header").Value;
-            report3Header = string.Format (report3Header, StartDate.ToShortDateString (), EndDate.ToShortDateString (), Unit);
+            report3Header = string.Format (report3Header, StartDate.ToString(dateFormat), EndDate.ToString(dateFormat), Unit);
 
             string table3Header = root.Element ("Table3HeaderRTG").Value;
             string table3Item = root.Element ("Table3RowRTG").Value;
@@ -330,7 +381,7 @@ namespace computerman_rtg_reports
             decimal report3Value = 0;
             foreach (UnitServiceReportItem item in UnitServiceReportItems)
             {
-                string newItem = string.Format (table3Item, i, item.Unit, item.Code, item.Count, item.Photos, item.Value.ToString ("c"));
+                string newItem = string.Format (table3Item, i, item.Unit, item.Code, item.Count, item.Photos, item.Value.ToString ("0.##"));
                 table3Header += newItem;
                 report3Count += item.Count;
                 report3Photos += item.Photos;
@@ -339,7 +390,7 @@ namespace computerman_rtg_reports
             }
 
             string table3Summary = root.Element ("Table3SummaryRTG").Value;
-            table3Summary = string.Format (table3Summary, report3Count, report3Photos, report3Value.ToString ("c"));
+            table3Summary = string.Format (table3Summary, report3Count, report3Photos, report3Value.ToString ("0.##"));
 
             string report3 = report3Header + table3Header + table3Summary;
 
