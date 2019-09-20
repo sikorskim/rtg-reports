@@ -9,9 +9,11 @@
 <Item Id="7" Code="USG-7" Name="USG piersi" Price="50" />
 <Item Id="8" Code="USG-8" Name="USG oznaczenie miejsca nakłucia klatki piersiowej" Price="40" />
 <Item Id="9" Code="USG-9" Name="USG tkanek miękkich" Price="40" />
-<Item Id="10" Code="USG-10" Name="doppler tętnic kończyn dolnych" Price="100" />
-<Item Id="11" Code="USG-12" Name="USG doppler tętnic szyjnych i kręgowych" Price="100" />
-<Item Id="12" Code="USG-13" Name="USG przezciemieniowe" Price="100" />
-<Item Id="13" Code="USG-14" Name="USG węzłów chłonnych" Price="100" />
-<Item Id="14" Code="USG-15" Name="USG doppler żył kończyn górnych" Price="100" />
+<Item Id="10" Code="USG-10" Name="USG doppler tętnic kończyn dolnych" Price="100" />
+<Item Id="11" Code="USG-11" Name="USG doppler aorty i tętnic biodrowych" Price="100" />
+<Item Id="12" Code="USG-12" Name="USG doppler tętnic szyjnych i kręgowych" Price="100" />
+<Item Id="13" Code="USG-13" Name="USG przezciemieniowe" Price="100" />
+<Item Id="14" Code="USG-14" Name="USG węzłów chłonnych" Price="100" />
+<Item Id="15" Code="USG-15" Name="USG doppler żył kończyn górnych" Price="100" />
+<Item Id="16" Code="USG-16" Name="USG doppler tętnic kończyn gónych" Price="100" />
 </Pricelist>

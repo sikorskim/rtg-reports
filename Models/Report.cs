@@ -32,57 +32,57 @@ namespace computerman_rtg_reports
             Unit = getUnit (rawUserData.Metadata);
             pricelist = getPricelist (Unit);
 
-            DataIsValid=checkServicesExistOnPricelist();
+            // DataIsValid=checkServicesExistOnPricelist();
 
-            if(DataIsValid)
-            {
+            // if(DataIsValid)
+            // {
                 UnitReportItems = getUnitsReport ();
                 ServiceReportItems = getServiceReport ();
                 UnitServiceReportItems = getUnitServiceReport ();
-            }
-            else
-            {
-                WrongServices = getWrongServices();
-            }
+            // }
+            // else
+            // {
+            //     WrongServices = getWrongServices();
+            // }
         }
 
-        bool getWrongServices()
-        {
-            List<UnitReportItem> unitReportItems = new List<UnitReportItem> ();
+        // bool getWrongServices()
+        // {
+        //     List<UnitReportItem> unitReportItems = new List<UnitReportItem> ();
 
-            try
-            {
-                foreach (var ms in rawUserData.MadeServicesList.GroupBy (p => p.Unit))
-                {
-                    UnitReportItem item = new UnitReportItem ();
-                    item.Unit = ms.Key;
-                    item.Count = ms.Count ();
-                    item.Value = 0;
+        //     try
+        //     {
+        //         foreach (var ms in rawUserData.MadeServicesList.GroupBy (p => p.Unit))
+        //         {
+        //             UnitReportItem item = new UnitReportItem ();
+        //             item.Unit = ms.Key;
+        //             item.Count = ms.Count ();
+        //             item.Value = 0;
 
-                    foreach (var serv in ms.Select (p => p.ServiceCode))
-                    {
-                        item.Value += pricelist.Single (p => p.Code == serv).Price;
-                        if (Unit == "Pracownia RTG")
-                        {
-                            item.Photos += pricelist.Single (p => p.Code == serv).Photos;
-                        }
-                    }
-                    unitReportItems.Add (item);
-                }
-            }
-            catch (InvalidOperationException)
-            {
-                foreach (var ms in rawUserData.MadeServicesList)
-                {
-                    if (!pricelist.Exists (p => p.Code == ms.ServiceCode))
-                    {
-                        Console.WriteLine (ms.PatientName);
-                    }
-                }
-            }
+        //             foreach (var serv in ms.Select (p => p.ServiceCode))
+        //             {
+        //                 item.Value += pricelist.Single (p => p.Code == serv).Price;
+        //                 if (Unit == "Pracownia RTG")
+        //                 {
+        //                     item.Photos += pricelist.Single (p => p.Code == serv).Photos;
+        //                 }
+        //             }
+        //             unitReportItems.Add (item);
+        //         }
+        //     }
+        //     catch (InvalidOperationException)
+        //     {
+        //         foreach (var ms in rawUserData.MadeServicesList)
+        //         {
+        //             if (!pricelist.Exists (p => p.Code == ms.ServiceCode))
+        //             {
+        //                 Console.WriteLine (ms.PatientName);
+        //             }
+        //         }
+        //     }
 
-            return unitReportItems.OrderByDescending (p => p.Count).ToList ();
-        }
+        //     return unitReportItems.OrderByDescending (p => p.Count).ToList ();
+        // }
 
         DateTime parseDateTime (string rawDt)
         {

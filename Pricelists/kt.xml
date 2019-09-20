@@ -51,4 +51,6 @@
 <Item Id="49" Code="88.38.B" Name="Komputerowa tomografia obojczyków" Price="300"/>
 <Item Id="50" Code="87.03.F" Name="Komputerowa tomografia szyi/krtani z kontrastem" Price="450"/>
 <Item Id="51" Code="87.03.G" Name="KT angiografia głowy" Price="600"/>
+<Item Id="52" Code="88.38.O" Name="Komputerowa tomografia stóp" Price="300"/>
+<Item Id="38" Code="88.02.A" Name="Komputerowa tomografia miednicy (narządy) bez kontrastu" Price="350"/>
 </Pricelist>
