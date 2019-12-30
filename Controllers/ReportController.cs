@@ -46,6 +46,7 @@ namespace computerman_rtg_reports.Controllers
             const string contentType = "application/pdf";
             HttpContext.Response.ContentType = contentType;
             FileContentResult result = null;
+            filename="tmp/"+filename;
 
             try
             {
@@ -56,8 +57,9 @@ namespace computerman_rtg_reports.Controllers
                 //deleteTempFiles (filename.Substring (4, 64));
                 return result;
             }
-            catch (FileNotFoundException)
+            catch (FileNotFoundException e)
             {
+                Console.WriteLine (e.Message);
                 return NotFound ();
             }
         }

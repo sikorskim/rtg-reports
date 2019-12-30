@@ -7,6 +7,7 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Xml.Linq;
+using System.Timers;
 
 namespace computerman_rtg_reports
 {
@@ -229,12 +230,25 @@ namespace computerman_rtg_reports
             string outputFile = getHash (output + time);
             File.WriteAllText ("tmp/" + outputFile + ".tex", output);
 
+
+            string args = "-synctex=1 -interaction=nonstopmode " + outputFile + ".tex";
             Process process = new Process ();
             process.StartInfo.WorkingDirectory = "tmp";
             process.StartInfo.FileName = "pdflatex";
-            process.StartInfo.Arguments = "-synctex=1 -interaction=nonstopmode " + outputFile + ".tex";
+            process.StartInfo.Arguments = args;
+            process.StartInfo.UseShellExecute = false;
             process.Start ();
-            process.Dispose ();
+            process.WaitForExit ();
+
+            if (process.ExitCode == 0)
+            {
+                Console.WriteLine("Command was successfully executed.");
+            }
+            else
+            {
+                Console.WriteLine("An error occurred.");
+            }
+
             return outputFile + ".pdf";
         }
 
